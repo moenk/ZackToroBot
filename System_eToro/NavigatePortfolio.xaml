@@ -84,7 +84,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e22c4ed3-69c5-47e1-a7ba-53529387d188" InformativeScreenshot="35aff00ade540223355d0a6cac89019d" Selector="&lt;html app='chrome.exe' title='*eToro*' /&gt;&lt;webctrl aaname='Portfolio' tag='SPAN' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e22c4ed3-69c5-47e1-a7ba-53529387d188" InformativeScreenshot="35aff00ade540223355d0a6cac89019d" Selector="&lt;html app='chrome.exe' idx='2' /&gt;&lt;webctrl aaname='Portfolio*' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1054,4248</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1054,4379</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>BuySell_eToro_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -67,14 +67,16 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BuySell_eToro" sap:VirtualizedContainerService.HintSize="644,4083" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BuySell_eToro" sap:VirtualizedContainerService.HintSize="644,4214" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="602,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Buy &amp; Sell eToro...&quot;]" />
     <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Zacks'" sap:VirtualizedContainerService.HintSize="602,3991" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="bfd0737da25b1731b8f0f52d495f91cd" Selector="&lt;html app='chrome.exe' title='*eToro*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -107,7 +109,7 @@
               </ui:InvokeWorkflowFile>
               <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
                 <ui:GetValue.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="44fe5225-1fa2-4ba4-a65a-6e2a75c4046a" InformativeScreenshot="2eea147d288c4eea6ac17d282e58ee68" Selector="&lt;html app='chrome.exe' title='*eToro*' /&gt;&lt;webctrl tag='DIV' class='footer-unit-value' parentclass='footer-unit total active demo-mode' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="44fe5225-1fa2-4ba4-a65a-6e2a75c4046a" InformativeScreenshot="2eea147d288c4eea6ac17d282e58ee68" Selector="&lt;html app='chrome.exe' title='*eToro*' /&gt;&lt;webctrl class='footer-unit-value' parentclass='footer-unit total active*' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -246,7 +248,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f035ff5d-4b34-459f-94e8-33e9e460897a" InformativeScreenshot="229d1f3223edd0628dedaa54276da9d9" Selector="&lt;webctrl aaname='Trade' tag='SPAN' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f035ff5d-4b34-459f-94e8-33e9e460897a" InformativeScreenshot="229d1f3223edd0628dedaa54276da9d9" Selector="&lt;webctrl aaname='Trade' tag='SPAN' class='ng-binding' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
