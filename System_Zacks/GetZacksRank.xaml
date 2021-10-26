@@ -1,15 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_ZacksRank" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_ZacksRank" this:Get_ZacksRank.strSymbol="CICOY" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="str_symbol" Type="InArgument(x:String)" />
-    <x:Property Name="str_rank" Type="OutArgument(x:String)" />
+    <x:Property Name="strRank" Type="OutArgument(x:String)" />
+    <x:Property Name="strSymbol" Type="InArgument(x:String)" />
+    <x:Property Name="dblEarnings" Type="OutArgument(x:Double)" />
   </x:Members>
-  <this:Get_ZacksRank.str_symbol>
-    <InArgument x:TypeArguments="x:String" />
-  </this:Get_ZacksRank.str_symbol>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1054,846</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1054,1323</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_ZacksRank_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -62,7 +60,10 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_ZacksRank" sap:VirtualizedContainerService.HintSize="476,681" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_ZacksRank" sap:VirtualizedContainerService.HintSize="476,1158" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strEarnings" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -80,22 +81,22 @@
         </ui:Target>
       </ui:Activate.Target>
     </ui:Activate>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Zacks'" sap:VirtualizedContainerService.HintSize="434,443" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="bfd0737da25b1731b8f0f52d495f91cd" Selector="&lt;html app='chrome.exe' title='*Zacks*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Zacks'" sap:VirtualizedContainerService.HintSize="434,920" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="bfd0737da25b1731b8f0f52d495f91cd" Selector="&lt;html app='chrome.exe' title='*Zacks*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,297" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,774" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[&quot;https://www.zacks.com/stock/quote/&quot; + str_symbol]" />
+            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[&quot;https://www.zacks.com/stock/quote/&quot; + strSymbol]" />
             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'P'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd18fd59-2833-4f67-be15-f30760fbf1a6" InformativeScreenshot="6b1c5b7f56479021d01dff6c84318827" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;p' parentid='quote_ribbon_v2' tag='P' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd18fd59-2833-4f67-be15-f30760fbf1a6" InformativeScreenshot="2848d700435f8ba140fe4bd29a50e53d" Selector="&lt;webctrl parentid='quote_ribbon_v2' tag='P' class='rank_view' idx='1' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -105,9 +106,41 @@
                 </ui:Target>
               </ui:GetValue.Target>
               <ui:GetValue.Value>
-                <OutArgument x:TypeArguments="x:String">[str_rank]</OutArgument>
+                <OutArgument x:TypeArguments="x:String">[strRank]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
+            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[strRank]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[strRank.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DD'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+              <ui:GetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3b18b393-25e5-4de0-8315-197663133c9a" InformativeScreenshot="09a5a9b8b0b47e6167751effa8a3898d" Selector="&lt;webctrl parentid='stock_key_earnings' tag='DD' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetValue.Target>
+              <ui:GetValue.Value>
+                <OutArgument x:TypeArguments="x:String">[strEarnings]</OutArgument>
+              </ui:GetValue.Value>
+            </ui:GetValue>
+            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Double">[dblEarnings]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Double">[val(strEarnings.Replace("%",""))]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[strSymbol + &quot;: &quot; + strEarnings + strRank]" />
           </Sequence>
         </ActivityAction>
       </ui:BrowserScope.Body>
