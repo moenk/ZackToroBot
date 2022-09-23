@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="strSymbol" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1054,1641</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1054,1541</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -106,7 +106,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2377eb14-4e9d-4ecf-8f1e-0501c7791438" InformativeScreenshot="3d9ae461f4cb0e8ff737602852ccacc3" Selector="&lt;webctrl aaname='Chart' parentname='chart' tag='SPAN' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2377eb14-4e9d-4ecf-8f1e-0501c7791438" InformativeScreenshot="d98c2be03aaf5f313fa7c13f41d54caa" Selector="&lt;webctrl aaname=' Chart ' tag='A' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -129,7 +129,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f035ff5d-4b34-459f-94e8-33e9e460897a" InformativeScreenshot="229d1f3223edd0628dedaa54276da9d9" Selector="&lt;webctrl aaname='Trade' tag='SPAN' class='ng-binding' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f035ff5d-4b34-459f-94e8-33e9e460897a" InformativeScreenshot="14298b4f42ccc605d29bdb93091cf229" Selector="&lt;webctrl aaname='Invest*' tag='DIV' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -163,7 +163,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82f70fb3-4b56-4e3c-85ae-68bf297c7248" InformativeScreenshot="a358f0f46de5245a7daa1ce2abbb0cbe" Selector="&lt;webctrl omit:css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='open-position-view' tag='DIV' class='ng-scope' parentclass='stepper-label' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82f70fb3-4b56-4e3c-85ae-68bf297c7248" InformativeScreenshot="a358f0f46de5245a7daa1ce2abbb0cbe" Selector="&lt;webctrl omit:css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;tabs&amp;gt;div&amp;gt;tabsnotselected&amp;gt;div&amp;gt;div&amp;gt;div' isleaf='1' parentid='open-position-view' tag='DIV' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -186,7 +186,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b592010-30ce-45c5-ba44-8e930dee76a4" InformativeScreenshot="a2895717daf2e79a83f9e13822fe7022" Selector="&lt;webctrl parentid='open-position-view' tag='BUTTON' class='execution-button button-standard button-blue pointer ng-binding ng-scope' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0b592010-30ce-45c5-ba44-8e930dee76a4" InformativeScreenshot="2d2967c7477986365438cbb5d5bc72d5" Selector="&lt;webctrl aaname='Set Order*' parentid='open-position-view' tag='BUTTON' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
