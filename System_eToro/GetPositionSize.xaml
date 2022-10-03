@@ -59,6 +59,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
@@ -134,7 +135,7 @@
                 <OutArgument x:TypeArguments="x:Double">[dblPosition]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:Double">[dblEquity * 0.01]</InArgument>
+                <InArgument x:TypeArguments="x:Double">[dblEquity * 0.02]</InArgument>
               </Assign.Value>
             </Assign>
             <If Condition="[dblPosition &lt; 50.0]" sap:VirtualizedContainerService.HintSize="484,246" sap2010:WorkflowViewState.IdRef="If_1">
